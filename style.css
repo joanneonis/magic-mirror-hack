@@ -1,0 +1,132 @@
+html, body {
+  background-color: black;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.unlock {
+	background-color: #00F6FF;
+	background-image: url('img/temp-bg.png');
+	background-size: cover;
+  padding: 20px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 350px;
+  height: 500px;
+	border-radius: 16px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+	transition: all .2s ease;
+	overflow: hidden;
+}
+
+.unlock img {
+	width: 80%;
+}
+
+.unlock.active {
+	opacity: 1;
+}
+
+.overlay {
+	position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+	opacity: 0;
+	transition: all .2s ease;
+}
+
+.overlay.active {
+	opacity: 1;
+}
+
+.compliment {
+	position: absolute;
+	right: 8%;
+	bottom: 10%;
+	width: 500px;
+	transform: rotate(-20deg);
+}
+
+.compliment img {
+	width: 100%;
+}
+
+.giphy img {
+	position: absolute;
+	max-width: 370px;
+	bottom: 5%;
+	left: 5%;
+}
+
+.star {
+	position: absolute;
+	top: 7%;
+	left: 4%;
+}
+
+.star .star__text {
+	z-index: 2;
+	position: absolute;
+	width: 140px;
+	top: 30px;
+	left: 20px;
+}
+
+.star .star__bg {
+	position: absolute;
+	width: 200px;
+	animation: rotating 15s infinite linear;
+}
+
+@keyframes rotating {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}
+
+.active .compliment img:nth-child(1) {
+	opacity: 0;
+	animation-delay: .2s;
+}
+
+.active .compliment img:nth-child(2) {
+	opacity: 0;
+	animation-delay: .4s;
+}
+
+.active .compliment img:nth-child(3) {
+	opacity: 0;
+	animation-delay: .5s;
+}
+
+.active .compliment img {
+opacity: 1;
+animation: fadeInOut 1s infinite;
+animation-fill-mode: forwards;
+}
+
+@keyframes fadeInOut {
+0% { opacity: 0; }
+100% { opacity: 1; }
+}
+
+.introvid {
+	object-fit: cover;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	height: 100%;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Magic-mirror</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="unlock active">
+			<!-- <img src="./img/smile.png" alt="smile"> -->
+			<video autoplay loop muted playsinline src="./img/introvi.mp4" class="introvid"></video>
+		</div>
+
+		<div class="overlay">
+			<div class="compliment">
+				<img src="./img/knappe-kop-outline.png" alt="">
+				<img src="./img/knappe-kop.png" alt="">
+				<img src="./img/knappe-kop-outline.png" alt="">
+			</div>
+
+			<div class="giphy">
+				<img src="./img/giphy.webp" alt="">
+			</div>
+
+			<div class="star">
+				<img class="star__bg" src="./img/star.svg" alt="">
+				<img class="star__text" src="./img/shine.png" alt="">
+			</div>
+		</div>
+	</div>
+
+	
+	<!-- Firebase App is always required and must be first -->
+	<script src="https://www.gstatic.com/firebasejs/5.0.1/firebase-app.js"></script>
+	<!-- Add additional services you want to use -->
+	<script src="https://www.gstatic.com/firebasejs/5.0.1/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.0.1/firebase-database.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.0.1/firebase-firestore.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.0.1/firebase-messaging.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.0.1/firebase-functions.js"></script>
+
+	<script defer src="script.js"></script>
+</body>
+</html>
