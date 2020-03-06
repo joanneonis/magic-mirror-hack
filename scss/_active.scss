@@ -1,0 +1,71 @@
+
+@keyframes rotating {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}
+
+@keyframes fadeInOut {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+.compliment {
+	position: absolute;
+	right: 8%;
+	bottom: 10%;
+	width: 500px;
+	transform: rotate(-20deg);
+
+	img {
+		width: 100%;
+	}
+}
+
+.giphy img {
+	position: absolute;
+	max-width: 370px;
+	bottom: 5%;
+	left: 5%;
+}
+
+.star {
+	position: absolute;
+	top: 7%;
+	left: 4%;
+
+	&__text {
+		z-index: 2;
+		position: absolute;
+		width: 140px;
+		top: 30px;
+		left: 20px;
+	}
+
+	&__bg {
+		position: absolute;
+		width: 200px;
+		animation: rotating 15s infinite linear;
+	}
+}
+
+.compliment img {
+	opacity: 0;
+
+	.active & {
+		opacity: 1;
+		animation: fadeInOut 1s infinite;
+		animation-fill-mode: forwards;
+	
+		&:nth-child(1) {
+			animation-delay: .2s;
+		}
+		
+		&:nth-child(2) {
+			animation-delay: .4s;
+		}
+		
+		&:nth-child(3) {
+			animation-delay: .5s;
+		}
+	}	
+}

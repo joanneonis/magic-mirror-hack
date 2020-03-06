@@ -1,0 +1,14 @@
+
+
+$headings-secondary-font-family: 'Barlow Condensed', sans-serif;
+$color-primary: #FFF200;
+$color-secondary: #00F6FF;
+
+@import 'marquee';
+@import 'screens';
+@import 'unlock';
+@import 'active';
+
+body {
+	background-color: black;
+}
